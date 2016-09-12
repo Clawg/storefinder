@@ -1,6 +1,6 @@
-var constants = require('./constants')
-var test = require('./test')
-var actions = require('./actions')
+var constants = require('./lib/constants')
+var test = require('./lib/test')
+var actions = require('./lib/actions')
 
 module.exports = {
     constants: constants,
