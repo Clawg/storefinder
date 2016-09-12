@@ -1,6 +1,6 @@
 {
   "name": "storefinder",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "Lotto store finder shared resources",
   "main": "lib/index.js",
   "scripts": {
@@ -8,7 +8,9 @@
     "prepublish": "npm run compile"
   },
   "babel": {
-    "presets": ["es2015"]
+    "presets": [
+      "es2015"
+    ]
   },
   "repository": {
     "type": "git",
