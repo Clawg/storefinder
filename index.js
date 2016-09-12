@@ -1,2 +1,7 @@
-module.exports = require('./constants')
-module.exports = require('./test')
+var constants = require('./constants')
+var test = require('./test')
+
+module.exports = {
+    constants: constants,
+    test: test
+}
