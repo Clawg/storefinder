@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Clawg/storefinder/issues"
   },
-  "homepage": "https://github.com/Clawg/storefinder#readme"
+  "homepage": "https://github.com/Clawg/storefinder#readme",
+  "devDependencies": {
+    "@lotto-nz/saturate": "^0.21.0"
+  }
 }
