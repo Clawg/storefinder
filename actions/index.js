@@ -79,77 +79,77 @@ export const getLottoResultsByDrawNumber = (drawNumber) => {
     }
 }
 
-// export const loadWagersForResults = (user, draw, dispatch) => {
+export const loadWagersForResults = (user, draw, dispatch) => {
 
-//     let maxDate = new Date(getServerTime()), y = maxDate.getFullYear(), m = maxDate.getMonth(), d = maxDate.getDate(), h = maxDate.getHours(), min = maxDate.getMinutes(), s = maxDate.getSeconds()
-//     let minDate = new Date(y-1, m, d + 1)
+    let maxDate = new Date(getServerTime()), y = maxDate.getFullYear(), m = maxDate.getMonth(), d = maxDate.getDate(), h = maxDate.getHours(), min = maxDate.getMinutes(), s = maxDate.getSeconds()
+    let minDate = new Date(y-1, m, d + 1)
 
-//     // Need to search previous 11 weeks to cater for multi-draw tickets since wager api relies on purchase date
-//     let endDate = new Date(draw.drawDate)
-//     let startDate = addWeek(endDate, MyTicketConstants.WAGER_DATE_WEEK_RANGE * -1)
+    // Need to search previous 11 weeks to cater for multi-draw tickets since wager api relies on purchase date
+    let endDate = new Date(draw.drawDate)
+    let startDate = addWeek(endDate, MyTicketConstants.WAGER_DATE_WEEK_RANGE * -1)
 
-//     endDate = addDay(endDate, 1)
-//     startDate = addDay(startDate, -1)
+    endDate = addDay(endDate, 1)
+    startDate = addDay(startDate, -1)
 
-//     if (endDate.getTime() > maxDate.getTime()) {
-//         endDate = maxDate
-//     }
-//     if (startDate.getTime() < minDate.getTime()) {
-//         startDate = minDate
-//     }
+    if (endDate.getTime() > maxDate.getTime()) {
+        endDate = maxDate
+    }
+    if (startDate.getTime() < minDate.getTime()) {
+        startDate = minDate
+    }
 
-//     let payload = {
-//         startdate: getISOTime(startDate),
-//         enddate: getISOTime(endDate),
-//         bullseye: false,
-//         keno: false,
-//         lotto: true,
-//         play3: false,
-//         strikeCategory: true
-//     }
+    let payload = {
+        startdate: getISOTime(startDate),
+        enddate: getISOTime(endDate),
+        bullseye: false,
+        keno: false,
+        lotto: true,
+        play3: false,
+        strikeCategory: true
+    }
 
-//     var endpoint = `${apigw}/api/core/v1/wagers/${user.userId}`
-//     endpoint += '?' + EncodeQueryData(payload)
+    var endpoint = `${apigw}/api/core/v1/wagers/${user.userId}`
+    endpoint += '?' + EncodeQueryData(payload)
 
-//     return {
-//         [CALL_API]: {
-//             endpoint,
-//             method: 'GET',
-//             timeout: DEFAULT_TIMEOUT,
-//             types: [
-//                 Constants.LOAD_RESULTS_WAGERS_REQUEST,
-//                 {
-//                     type: Constants.LOAD_RESULTS_WAGERS_SUCCESS,
-//                     payload: (action, state, res) => {
+    return {
+        [CALL_API]: {
+            endpoint,
+            method: 'GET',
+            timeout: DEFAULT_TIMEOUT,
+            types: [
+                Constants.LOAD_RESULTS_WAGERS_REQUEST,
+                {
+                    type: Constants.LOAD_RESULTS_WAGERS_SUCCESS,
+                    payload: (action, state, res) => {
 
-//                         var gameHistory = res.data.gameHistory
+                        var gameHistory = res.data.gameHistory
 
-//                         // dispatch an action for each ticket
+                        // dispatch an action for each ticket
 
-//                         loadedTickets = getTicketsFromWagers(gameHistory)
-//                         let toBeLoadedTicketCount = 0
-//                         let loadedTicketNumbers = []
-//                         for (var ticketNumber of loadedTickets) {
-//                             if (state.results.loadedTicketNumbers.indexOf(ticketNumber) === -1) {
-//                                 dispatch(loadResultTicketDetails(user, ticketNumber, dispatch))
-//                                 toBeLoadedTicketCount++
-//                                 loadedTicketNumbers.push(ticketNumber)
-//                             }
-//                         }
+                        loadedTickets = getTicketsFromWagers(gameHistory)
+                        let toBeLoadedTicketCount = 0
+                        let loadedTicketNumbers = []
+                        for (var ticketNumber of loadedTickets) {
+                            if (state.results.loadedTicketNumbers.indexOf(ticketNumber) === -1) {
+                                dispatch(loadResultTicketDetails(user, ticketNumber, dispatch))
+                                toBeLoadedTicketCount++
+                                loadedTicketNumbers.push(ticketNumber)
+                            }
+                        }
 
-//                         res.toBeLoadedTicketCount = toBeLoadedTicketCount
-//                         res.loadedTicketNumbers = loadedTicketNumbers
-//                         return res
-//                     }
-//                 },
-//                 Constants.LOAD_RESULTS_WAGERS_FAILURE
-//             ],
-//             headers: {
-//                 'Authorization': `Bearer ${user.accessToken}`
-//             }
-//         }
-//     }
-// }
+                        res.toBeLoadedTicketCount = toBeLoadedTicketCount
+                        res.loadedTicketNumbers = loadedTicketNumbers
+                        return res
+                    }
+                },
+                Constants.LOAD_RESULTS_WAGERS_FAILURE
+            ],
+            headers: {
+                'Authorization': `Bearer ${user.accessToken}`
+            }
+        }
+    }
+}
 
 export const loadResultTicketDetails = (user, ticketNumber, dispatch) => {
 
