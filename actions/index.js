@@ -1,7 +1,7 @@
 //import {CALL_API} from '@lotto-nz/saturate'
 //import * as Constants from '../constants'
 //import * as actions from '../actions'
-var Constants = require('./constants')
+var Constants = require('../constants')
 //var Actions = require('./actions')
 
 //import * as MyTicketConstants from '../../my-tickets/constants'
