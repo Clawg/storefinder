@@ -59,19 +59,6 @@ const dismissOfflineModal = () => {
     }
 }
 
-const actions = {
-    toggleShowNearestStores: toggleShowNearestStores,
-    setFullscreenMap: setFullscreenMap,
-    changeSearchTerm: changeSearchTerm,
-    changeManualSearchOption: changeManualSearchOption,
-    showSuggestedResults: showSuggestedResults,
-    hideSuggestedResults: hideSuggestedResults,
-    setSelectedStore: setSelectedStore,
-    showOfflineModal: showOfflineModal,
-    dismissOfflineModal: dismissOfflineModal
-}
-
-export default actions
 
 // export const toggleFullscreenMap = () => {
 //     return (dispatch, getState) => {
@@ -81,3 +68,17 @@ export default actions
 //         dispatch(setFullscreenMap())
 //     }
 // }
+
+const Actions = {
+    toggleShowNearestStores,
+    setFullscreenMap,
+    changeSearchTerm,
+    changeManualSearchOption,
+    showSuggestedResults,
+    hideSuggestedResults,
+    setSelectedStore,
+    showOfflineModal,
+    dismissOfflineModal
+}
+
+export default Actions

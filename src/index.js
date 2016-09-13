@@ -1,6 +1,6 @@
-import constants from './constants'
-import test from './test'
-import actions from './actions'
+import Constants from './constants'
+import Test from './test'
+import Actions from './actions'
 
 // const StoreFinder = {
 //     constants: constants, 
@@ -11,7 +11,7 @@ import actions from './actions'
 // export default StoreFinder
 
 export {
-  constants,
-  test,
-  actions
+  Constants,
+  Test,
+  Actions
 }
