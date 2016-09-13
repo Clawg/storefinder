@@ -227,7 +227,7 @@ const getPhoneUrl = (phone) => {
     return `tel:${phone.replace(/\s/g, '')}`
 }
 
-const Helpers = {
+export default Helpers = {
     toRad,
     sortByKey,
     haversineDistance,
@@ -240,4 +240,4 @@ const Helpers = {
     getPhoneUrl
 }
 
-export default Helpers
+// export default Helpers
