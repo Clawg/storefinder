@@ -60,15 +60,15 @@ const dismissOfflineModal = () => {
 }
 
 const actions = {
-    toggleShowNearestStores: toggleShowNearestStores(),
+    toggleShowNearestStores: toggleShowNearestStores,
     setFullscreenMap: setFullscreenMap,
-    changeSearchTerm: changeSearchTerm(),
-    changeManualSearchOption: changeManualSearchOption(),
-    showSuggestedResults: showSuggestedResults(),
-    hideSuggestedResults: hideSuggestedResults(),
-    setSelectedStore: setSelectedStore(),
-    showOfflineModal: showOfflineModal(),
-    dismissOfflineModal: dismissOfflineModal()
+    changeSearchTerm: changeSearchTerm,
+    changeManualSearchOption: changeManualSearchOption,
+    showSuggestedResults: showSuggestedResults,
+    hideSuggestedResults: hideSuggestedResults,
+    setSelectedStore: setSelectedStore,
+    showOfflineModal: showOfflineModal,
+    dismissOfflineModal: dismissOfflineModal
 }
 
 export default actions
