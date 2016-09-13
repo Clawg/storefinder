@@ -1,65 +1,77 @@
 // src/modules/store-finder/actions/index.js
-
 import * as Constants from '../constants'
 //import {hideNavBar, showNavBar} from '../../core/actions'
 
-
-export const toggleShowNearestStores = () => {
+const toggleShowNearestStores = () => {
     return {
         type: Constants.TOGGLE_SHOW_NEAREST_STORES
     }
 }
 
-export const setFullscreenMap = () => {
+const setFullscreenMap = () => {
     return {
         type: Constants.TOGGLE_FULLSCREEN_MAP
     }
 }
 
-export const changeSearchTerm = (searchTerm) => {
+const changeSearchTerm = (searchTerm) => {
     return {
         type: Constants.CHANGE_SEARCH_TERM,
         searchTerm
     }
 }
 
-export const changeManualSearchOption = (searchOption) => {
+const changeManualSearchOption = (searchOption) => {
     return {
         type: Constants.CHANGE_MANUAL_SEARCH_OPTION,
         searchOption
     }
 }
 
-export const showSuggestedResults = () => {
+const showSuggestedResults = () => {
     return {
         type: Constants.SHOW_SUGGESTED_RESULTS
     }
 }
 
-export const hideSuggestedResults = () => {
+const hideSuggestedResults = () => {
     return {
         type: Constants.HIDE_SUGGESTED_RESULTS
     }
 }
 
-export const setSelectedStore = (selectedStore) => {
+const setSelectedStore = (selectedStore) => {
     return {
         type: Constants.SET_SELECTED_STORE,
         selectedStore
     }
 }
 
-export const showOfflineModal = () => {
+const showOfflineModal = () => {
     return {
         type: Constants.SHOW_OFFLINE_MODAL
     }
 }
 
-export const dismissOfflineModal = () => {
+const dismissOfflineModal = () => {
     return {
         type: Constants.DISMISS_OFFLINE_MODAL
     }
 }
+
+const actions = {
+    toggleShowNearestStores(),
+    setFullscreenMap(),
+    changeSearchTerm(),
+    changeManualSearchOption(),
+    showSuggestedResults(),
+    hideSuggestedResults(),
+    setSelectedStore(),
+    showOfflineModal(),
+    dismissOfflineModal
+}
+
+export default actions
 
 // export const toggleFullscreenMap = () => {
 //     return (dispatch, getState) => {
