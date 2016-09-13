@@ -1,4 +1,4 @@
-export default Constants = {
+const Constants = {
     TOGGLE_SHOW_NEAREST_STORES: 'TOGGLE_SHOW_NEAREST_STORES', 
     TOGGLE_FULLSCREEN_MAP: 'TOGGLE_FULLSCREEN_MAP',
     CHANGE_SEARCH_TERM: 'CHANGE_SEARCH_TERM',
@@ -10,4 +10,4 @@ export default Constants = {
 	DISMISS_OFFLINE_MODAL: 'DISMISS_OFFLINE_MODAL'
 }
 
-//export default constants
+export default Constants
