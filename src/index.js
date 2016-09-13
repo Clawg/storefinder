@@ -1,11 +1,13 @@
-import Constants from './constants'
-import Test from './test'
 import Actions from './actions'
+import Constants from './constants'
 import Helpers from './helpers'
+import Reducers from './reducers'
+import Test from './test'
 
 export {
-  Constants,
-  Test,
   Actions,
-  Helpers
+  Constants,
+  Helpers,
+  Reducers,
+  Test 
 }
