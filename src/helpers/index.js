@@ -1,7 +1,5 @@
 // src/modules/store-finder/helpers/index.js
 
-//import {Platform} from 'react-native'
-// 
 
 // convert degrees to radians
 const toRad = (num) => {
@@ -215,12 +213,7 @@ const getBoundsForResults = (data, position) => {
     }
 }
 
-// get a url to open the native mapping app for navigation
-// export function getDirectionsUrl(latitude, longitude) {
-//     return Platform.OS === 'ios'
-//         ? `maps:daddr=${latitude},${longitude}`
-//         : `google.navigation:q=${latitude},${longitude}`
-// }
+
 
 // get a url to open the native phone app
 const getPhoneUrl = (phone) => {
