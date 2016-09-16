@@ -60,9 +60,6 @@ const dismissOfflineModal = () => {
     }
 }
 
-
-actions
-
 const Actions = {
     toggleShowNearestStores,
     setFullscreenMap,
