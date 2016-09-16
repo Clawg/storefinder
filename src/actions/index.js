@@ -1,6 +1,7 @@
 // src/modules/store-finder/actions/index.js
-import * as Constants from '../constants'
+import * as ConstantsNpm from '../constants'
 //import {hideNavBar, showNavBar} from '../../core/actions'
+const Constants = ConstantsNpm.default
 
 const toggleShowNearestStores = () => {
     return {
@@ -60,14 +61,7 @@ const dismissOfflineModal = () => {
 }
 
 
-// export const toggleFullscreenMap = () => {
-//     return (dispatch, getState) => {
-//         if (getState().storeFinder.fullscreenMap) dispatch(showNavBar())
-//         else dispatch(hideNavBar())
-
-//         dispatch(setFullscreenMap())
-//     }
-// }
+actions
 
 const Actions = {
     toggleShowNearestStores,
