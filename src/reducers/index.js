@@ -1,8 +1,8 @@
 // src/modules/store-finder/reducers/index.js
+import * as ConstantsNpm from '../constants'
 
-import * as Constants from '../constants'
-
-export const initialState = {
+const Constants = ConstantsNpm.default
+const initialState = {
     fullscreenMap: false,
     showNearestStores: true,
     searchTerm: '',
