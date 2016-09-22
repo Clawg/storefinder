@@ -1,6 +1,6 @@
 {
   "name": "storefinder",
-  "version": "1.0.37",
+  "version": "1.0.38",
   "description": "Lotto store finder shared resources",
   "main": "lib/index.js",
   "scripts": {
