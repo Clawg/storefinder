@@ -36,6 +36,8 @@ const haversineDistance = (start, end) => {
         Math.sin(lonDiff / 2) * Math.sin(lonDiff / 2) * Math.cos(startLat) * Math.cos(endLat)
     const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a))
 
+    console.log('Blah')
+
     return parseFloat((radius * c).toFixed(1))
 }
 
