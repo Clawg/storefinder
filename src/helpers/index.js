@@ -36,14 +36,13 @@ const haversineDistance = (start, end) => {
         Math.sin(lonDiff / 2) * Math.sin(lonDiff / 2) * Math.cos(startLat) * Math.cos(endLat)
     const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a))
 
-    console.log('Blah')
-
     return parseFloat((radius * c).toFixed(1))
 }
 
 
 // pad a post code to at elast 4 digits
 const padPostCode = (code) => {
+    console.log('Sup Charlie')
     if (code.length === 4) return code
     return '0'.repeat(4 - code.length) + code
 }
